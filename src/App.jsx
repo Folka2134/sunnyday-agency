@@ -2,6 +2,8 @@ import "./App.css";
 
 import desktopHeader from "./assets/images/desktop/image-header.jpg";
 import mobileHeader from "./assets/images/mobile/image-header.jpg";
+import eggDesktop from "./assets/images/desktop/image-transform.jpg";
+import cupDesktop from "./assets/images/desktop/image-stand-out.jpg";
 
 function App() {
   return (
@@ -24,18 +26,18 @@ function App() {
           </ul>
         </nav>
         <div className="flex flex-col relative justify-center items-center">
-          <div className="flex flex-col text-center items-center absolute">
+          <div className="flex flex-col text-center items-center absolute mb-96">
             <h1 className="text-6xl text-white uppercase p-6">
               We are creatives
             </h1>
             <svg width="36" height="114" xmlns="http://www.w3.org/2000/svg">
               <g
                 stroke="#FFF"
-                stroke-width="6"
+                strokeWidth="6"
                 fill="none"
-                fill-rule="evenodd"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                fillRule="evenodd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M18 3v100M3 95.484l15 15 15-15" />
               </g>
@@ -43,14 +45,14 @@ function App() {
           </div>
           <img
             // src={mobileHeader}
-            className="h-fit"
+            className="h-full"
             srcSet={`${mobileHeader} 780w, ${desktopHeader} 800w`}
             alt=""
           />
         </div>
-        <div>
-          {/* Grid items */}
-          <div>
+        {/* Grid items */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 xl:auto-rows-fr">
+          <div className="bg-gray-500">
             <h3>Transform your brand</h3>
             <p>
               We are a full-service creative agency specializing in helping
@@ -59,9 +61,13 @@ function App() {
             </p>
             <button>Learn more</button>
           </div>
-          <img src="" alt="egg" />
-          <img src="" alt="Cup" />
-          <div>
+          <div className="grid bg-[#FDD302] justify-items-center items-center">
+            <img className="w-full" src={eggDesktop} alt="egg" />
+          </div>
+          <div className="grid bg-[#FE7B69] justify-items-center items-center">
+            <img className="w-full" src={cupDesktop} alt="Cup" />
+          </div>
+          <div className="bg-gray-500">
             <h3>Stand out to the right audience</h3>
             <p>
               Using a collaborative formula of designers, researchers,
@@ -70,15 +76,18 @@ function App() {
             </p>
             <button>Learn more</button>
           </div>
-          <div>
-            <h3>Graphic design</h3>
-            <p>
-              Great design makes you memorable. We deliver artwork that
-              underscores your brand message and captures potential clients'
-              attention.
-            </p>
+          <div className="bg-green-500 static">
+            <img className="w-full" src={eggDesktop} alt="cherry" />
+            <div className="static">
+              <h3>Graphic design</h3>
+              <p>
+                Great design makes you memorable. We deliver artwork that
+                underscores your brand message and captures potential clients'
+                attention.
+              </p>
+            </div>
           </div>
-          <div>
+          <div className="bg-blue-500">
             <h3>Photography</h3>
             <p>
               Increase your credibility by getting the most stunning,
